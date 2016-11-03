@@ -138,7 +138,7 @@ module FFMPEG
     end
 
     def remote?
-      @path =~ URI::regexp
+      @path =~ URI::regexp(%w(http https))
     end
 
     def local?
